@@ -36,8 +36,8 @@ export const themeConfig: DefaultTheme.Config = {
         {icon: 'github', link: 'https://github.com/easysoft/zui'}
     ],
     editLink: {
-        pattern: (payload) => {
-            return `https://github.com/yaoGrace/zui/edit/main/lib/${payload.filePath.replace('/', '/docs/')}`;
+        pattern: (payload) => { 
+            return `https://github.com/yaoGrace/zui/edit/main/docs/docs/${payload.filePath.replace('/', '/docs/')}`;
         },
         text: '在 Github 上编辑',
     },
