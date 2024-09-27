@@ -33,11 +33,14 @@ export const themeConfig: DefaultTheme.Config = {
     },
     nav: createNav(),
     socialLinks: [
-        {icon: 'github', link: 'https://github.com/easysoft/zui'}
+        {icon: 'github', link: 'https://github.com/yaoGrace/zui'}
     ],
     editLink: {
-        pattern: (payload) => { 
-            return `https://github.com/yaoGrace/zui/edit/main/docs/docs/${payload.filePath.replace('/', '/docs/')}`;
+         
+        pattern: (payload) => {
+            const filePath = payload.filePath;
+            const newFilePath = filePath.replace(/\//g, '/docs/');
+            return `https://github.com/yaoGrace/zui/edit/main/docs/docs/${newFilePath}`;
         },
         text: '在 Github 上编辑',
     },
